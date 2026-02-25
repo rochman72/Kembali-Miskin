@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMC Dashboard - XAUUSD</title>
 
-    <!-- TradingView Chart Library -->
     <script src="https://s3.tradingview.com/tv.js"></script>
 
     <link rel="stylesheet" href="style.css">
@@ -18,38 +17,22 @@
 </header>
 
 <div class="layout">
-
-    <!-- LEFT: Chart -->
     <section class="card">
         <h2>TradingView Chart</h2>
         <div id="tv-chart" style="height: 420px;"></div>
 
-        <div class="tf-selector">
-            <button onclick="changeTF('1')">M1</button>
-            <button onclick="changeTF('3')">M3</button>
-            <button onclick="changeTF('5')">M5</button>
-            <button onclick="changeTF('15')">M15</button>
-            <button onclick="changeTF('30')">M30</button>
-            <button onclick="changeTF('60')">H1</button>
-            <button onclick="changeTF('240')">H4</button>
-            <button onclick="changeTF('1D')">D1</button>
-            <button onclick="changeTF('1W')">W1</button>
-            <button onclick="changeTF('1M')">MN</button>
-        </div>
-
+        <div class="tf-selector" id="tfButtons"></div>
     </section>
 
-    <!-- RIGHT: Auto Analysis -->
     <section class="card">
         <h2>Auto Technical Analysis</h2>
         <div id="tradingview-analysis"></div>
+        <div id="output" class="result-box">Menunggu data market...</div>
     </section>
-
 </div>
 
-<!-- SMC TOOL SECTION -->
 <section class="card">
-    <h2>🔮 Smart Money Concepts Tools (Auto + Manual)</h2>
+    <h2>🔮 Smart Money Concepts Tools (Manual Input)</h2>
 
     <div class="input-grid">
         <div>
@@ -66,14 +49,14 @@
         </div>
     </div>
 
-    <button onclick="calculateSMC()">Generate Analysis</button>
+    <button onclick="calculateSMC()">Generate Manual Analysis</button>
 
     <div id="signalBadge" class="badge">SIGNAL: -</div>
-
-    <div id="details" class="result-box"></div>
 </section>
 
 <script src="libs/smc.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
