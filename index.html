@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>OMoon SMC Engine vX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://s3.tradingview.com/tv.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>OMoon SMC Engine vX 🚀</h1>
+    <p>Full Auto — MTF — Liquidity — FVG — OrderBlock — OTE</p>
+</header>
+
+<div class="layout">
+
+    <div class="left">
+        <div id="tv-chart"></div>
+        <div id="analysis">
+            <h2>Auto Analysis</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <div class="right">
+        <h2>Controls</h2>
+
+        <div id="tfButtons"></div>
+
+        <button class="generate" onclick="runAll()">Run Full Analysis</button>
+
+        <div id="signalBadge" class="badge">WAITING</div>
+    </div>
+
+</div>
+
+<script src="libs/smc.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
